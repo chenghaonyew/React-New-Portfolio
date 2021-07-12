@@ -121,8 +121,9 @@ const Wrap = styled.div`
         padding: 4px;
         
         img{
-            width: 100%;
-            height: 600px; 
+          margin-left: auto;
+          margin-right: auto;
+            height: 100%; 
         }
       
         &:hover{
