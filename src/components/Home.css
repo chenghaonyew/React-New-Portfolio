@@ -1,0 +1,106 @@
+.home{
+    position: relative;
+    min-height: calc(100vh-250px);
+    overflow-x: hidden;
+    display :block;
+    top: 100px;
+    padding: 0 calc(3.5vw-5px);
+}
+
+.home_background{
+    left: 0px;
+    opacity: 0.7;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+}
+    .home_background > img{
+        width: 100vw;
+        height: 100vh;
+    }
+
+.home_title{
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-left: 30px;
+    min-height: 100px;
+    width: 100%;
+}
+    .home_title > p{
+        font-size: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+.home_contentMeta{
+    max-width: 874px;
+}
+
+.home_controls {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin: 24px 30px;
+    min-height: 56px;
+}
+
+.home_icon{
+    font-size: 20px;
+    margin: 0px 22px 0px 0px;
+    padding: 0px 24px;
+    height: 56px;
+    border-radius: 8px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.8px;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
+}
+
+.home_icon:hover{
+    background: rgb(198,198,198);
+    color: rgb(0,0,0)
+}
+
+    .home_icon > .MuiSvgIcon-root{
+        width:32px;
+    }
+
+.home_description{
+    line-height: 1.4;
+    font-size: 22px;
+    padding: 16px 0px;
+    color: rgb(0,0,0);
+    text-align: left;
+    margin-left: 30px;
+}
+
+@media (max-width: 768px){
+    .home_background > img{
+        width: initial;
+    }
+
+    .home_icon{
+        height: 45px;
+        padding: 0px 22px;
+        font-size: 15px;
+        margin: 0px 10px 0px 0px;
+    }
+
+    .home_icon > .MuiSvgIcon-root{
+        width:25px;
+    }
+
+    .home_description{
+        font-size: 18px;
+    }
+}
