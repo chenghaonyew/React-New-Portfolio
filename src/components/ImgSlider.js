@@ -2,9 +2,9 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Project1 from "../images/campground.jpg";
-import Project2 from "../images/portfolio.png";
-import Project3 from "../images/portfolio.png";
+import Project1 from "../images/campground1.jpg";
+import Project2 from "../images/old-portfolio1.png";
+import Project3 from "../images/old-portfolio2.png";
 
 const ImgSlider = (props) => {
   // yarn add react-slick

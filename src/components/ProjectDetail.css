@@ -9,7 +9,7 @@
 }
 
 .projectDetail::after{
-    background: url("../images/detail-background.png") center center / cover no-repeat fixed;
+    background: url("../images/background-detail.png") center center / cover no-repeat fixed;
     content: "";
     position: absolute;
     inset: 0px;

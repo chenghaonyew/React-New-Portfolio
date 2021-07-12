@@ -2,8 +2,8 @@ import React from "react";
 import "./Project.css";
 import { Link } from "react-router-dom";
 import ProjectBackground from "../images/Projectbackground.jpg";
-import Project1 from "../images/campground.jpg";
-import Project2 from "../images/portfolio.png";
+import Project1 from "../images/campground1.jpg";
+import Project2 from "../images/old-portfolio1.png";
 
 function Project() {
   return (
