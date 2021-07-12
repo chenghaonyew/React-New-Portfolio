@@ -2,9 +2,9 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Project1 from "../images/campground1.jpg";
-import Project2 from "../images/old-portfolio1.png";
-import Project3 from "../images/old-portfolio2.png";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import db from "./firebase";
 
 const ImgSlider = (props) => {
   // yarn add react-slick
@@ -17,24 +17,48 @@ const ImgSlider = (props) => {
     slidesToScroll: 1,
     autoplay: true,
   };
+
+  const { id } = useParams();
+  const [detailData, setDetailData] = useState({});
+
+  useEffect(() => {
+    db.collection("project")
+      .doc(id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setDetailData(doc.data());
+        } else {
+          console.log("no such document in firebase");
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }, [id]);
+
   return (
     <div>
       <Carousel {...settings}>
         <Wrap>
           <a>
-            <img src={Project1} alt=""></img>
+            <img src={detailData.images1} alt=""></img>
           </a>
         </Wrap>
-        <Wrap>
-          <a>
-            <img src={Project2} alt=""></img>
-          </a>
-        </Wrap>
-        <Wrap>
-          <a>
-            <img src={Project3} alt=""></img>
-          </a>
-        </Wrap>
+        {detailData.images2 && (
+          <Wrap>
+            <a>
+              <img src={detailData.images2} alt=""></img>
+            </a>
+          </Wrap>
+        )}
+        {detailData.images3 && (
+          <Wrap>
+            <a>
+              <img src={detailData.images3} alt=""></img>
+            </a>
+          </Wrap>
+        )}
       </Carousel>
     </div>
   );

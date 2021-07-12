@@ -8,14 +8,17 @@
     color: white;
 }
 
-.projectDetail::after{
-    background: url("../images/background-detail.png") center center / cover no-repeat fixed;
-    content: "";
-    position: absolute;
-    inset: 0px;
-    opacity: 1;
+.projectDetail_background{
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
     z-index: -1;
 }
+    .projectDetail_background > img{
+        width: 100vw;
+        height: 100vh;
+    }
 
 .projectDetail_title{
     color: white;
@@ -31,7 +34,7 @@
 .projectDetail_info{
     display:flex;
     justify-content: space-evenly;
-    margin-bottom:100px ;
+    min-height: 100%;
 }
 
 .projectDetail_description{

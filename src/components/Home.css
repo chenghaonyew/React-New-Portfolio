@@ -82,6 +82,7 @@
     color: rgb(0,0,0);
     text-align: left;
     margin-left: 30px;
+    font-weight: 500;
 }
 
 @media (max-width: 768px){
