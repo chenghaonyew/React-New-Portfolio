@@ -32,7 +32,10 @@ function Home() {
             <EmailIcon />
             <span>gmail</span>
           </a>
-          <a className="home_icon" href="https://github.com/chenghaonyew">
+          <a
+            className="home_icon"
+            href="https://github.com/chenghaonyew/React-New-Portfolio/blob/master/src/images/NyewChengHao_Resume.pdf"
+          >
             <DescriptionIcon />
             <span>resume</span>
           </a>
