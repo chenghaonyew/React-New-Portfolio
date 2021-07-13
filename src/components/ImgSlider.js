@@ -123,7 +123,7 @@ const Wrap = styled.div`
         img{
           margin-left: auto;
           margin-right: auto;
-            height: 100%; 
+          height: 100%; 
         }
       
         &:hover{

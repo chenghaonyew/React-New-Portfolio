@@ -53,7 +53,6 @@ function Project() {
         {doneProjects &&
           doneProjects.map((project, key) => (
             <div className="project_wrap" key={key}>
-              {project.id}
               <Link to={"/detail/" + project.id}>
                 <img src={project.images1} alt="project.title" />
               </Link>
