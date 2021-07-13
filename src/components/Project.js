@@ -59,6 +59,20 @@ function Project() {
             </div>
           ))}
       </div>
+      <p>On Going Project</p>
+      <div className="project_content">
+        {onGoingProjects &&
+          onGoingProjects.map((project, key) => (
+            <div className="project_wrap" key={key}>
+              <Link to={"/detail/" + project.id}>
+                <img
+                  src="https://st4.depositphotos.com/2274151/27787/v/450/depositphotos_277873508-stock-illustration-in-progress.jpg"
+                  alt="project.title"
+                />
+              </Link>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
